@@ -5,7 +5,7 @@ import openai
 import os
 import base64
 # Se for testar mude esse caminho para o seu vvv
-img_caminho = 'C:/Users/Richard/Documents/Richard/imagem1.jpg'
+img_caminho = 'PutFilePathHere'
 cont = 0
 
 def image_to_data_uri(file_path):
@@ -17,7 +17,7 @@ def transformar_imagem(lingua, abv):
     jinaai = JinaAI(
         secrets={
             # Se a chave expirar cria uma nova conta no scenexplain, gera uma nova chave e coloca no lugar dessa
-            'scenex-secret': 'XVOQd1bL38HEoHPRl034:f513c618c7ea968414f7a35abdb92b1002bf0452b65e43f9479b453732ef8d18'
+            'scenex-secret': 'scenex-key'
 
         }
     )
@@ -26,7 +26,7 @@ def transformar_imagem(lingua, abv):
         image_to_data_uri(img_caminho)
     )
 
-    openai.api_key = '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'
+    openai.api_key = 'openai-key'
     model_engine = "text-davinci-003"
     max_tokens = 1024
 
